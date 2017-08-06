@@ -2,7 +2,7 @@
 
 <div class="jumbotron">
     <div class="container text-center">
-        <h1 id="search-header">POPULAR MOVIES</h1>
+        <h1 id="search-header">TOP RATED MOVIES</h1>
         <div class="input-group col-md-6 col-md-offset-3">
             <input type="text" class="form-control" placeholder="Search for a movie">
             <span class="input-group-btn">
@@ -15,11 +15,12 @@
 
 <div class="container" >
     <div id="results">
-        <div ng-repeat='movie in popCtrl.popularArray' class="col-xs-6 col-md-3 thumbnail">
+        <div ng-repeat='movie in topCtrl.topRatedArray' class="col-xs-6 col-md-3 thumbnail">
             <img ng-style="{'background-image':'url(https://image.tmdb.org/t/p/w500/{{movie.poster_path}})'}" class='img-responsive'>
             <div class="caption">
                 <h3>{{movie.title}}</h3>
                 <p>{{movie.release_date}}</p>
+                <span>Rating: {{movie.vote_average}} </span><span class='glyphicon glyphicon-star'></span>
             </div>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#">More details</button>
         </div>

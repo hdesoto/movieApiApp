@@ -15,4 +15,23 @@ myApp.service('DataService', function ($http) {
 			})
 	}
 
+	self.getPopular = function(callback){
+		console.log('getPopular Called!')
+		var url = 'https://api.themoviedb.org/3/movie/popular?api_key=' + v3Token + '&page=1'
+		$http.get(url)
+		  .then(function(response){
+		  		callback(response.data.results)
+		  })
+
+	}
+
+	self.getTopRated = function (callback){
+		console.log('get Top Rated Called')
+		var url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=' + v3Token + '&page=1'
+		$http.get(url)
+		  .then(function(response){
+		  		callback(response.data.results)
+		  })
+	}
+
 });
