@@ -1,0 +1,59 @@
+body{
+	padding-top:50px;
+}
+
+.navbar{
+	border-radius: 0;
+	margin:0;
+}
+
+#search-header {
+	margin-top:0;
+	font-size:180%;
+	font-weight: bold;
+}
+
+.jumbotron{
+	background-color: darkgrey;
+}
+
+
+
+#results{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+	margin:0px;
+}
+
+.thumbnail{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	width:250px;
+	height: 500px;
+
+}
+
+.thumbnail p{
+	height: :200px;
+	overflow:hidden;
+}
+
+.thumbnail h3{
+	overflow:hidden;
+}
+
+.thumbnail img{
+	height: 300px;
+	width:100%;
+	background-size:cover;
+	background-position:center center;
+}
+
+.thumbnail .btn{
+	width:100%;
+}
+
+
+
