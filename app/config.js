@@ -1,9 +1,9 @@
 /* global angular */
 
 angular.module('MoviesApp')
-      .config(function ($routeProvider) {
+      .config(function ($routeProvider.$location) {
         $routeProvider
-      .when('/nowPlaying', {
+      .when('//', {
         templateUrl: '//routes/nowPlaying/template.html',
         controller: 'nowPlayingController',
         controllerAs: 'nowCtrl'
