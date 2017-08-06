@@ -1,12 +1,8 @@
-myApp.controller('nowPlayingController', function($routeParams, DataService) {
-    var self = this;
+myApp.controller('nowPlayingController', function($routeParams, $location, DataService) {
+    
     console.log('now playing controller loading')
-
-    self.picture;
-    self.title;
-    self.overview;
-    self.releasedate;
-    console.log('all self created')
+    var self = this;
+    self.query = "";
     showNowPlaying()
 
     function showNowPlaying() {
@@ -17,11 +13,11 @@ myApp.controller('nowPlayingController', function($routeParams, DataService) {
         })
     }
 
-    /*
-	self.showNowPlaying = function () {
-		getInfoServices.getNowPlaying(response)
-		  .then( this.nowPlaying = response);
-	}
-*/
+    self.searchTrigger = function () {
+        console.log('searh Triggered')
+        console.log(self.query)
+        $location.path('/search/' + self.query)
+
+    }
 
 })

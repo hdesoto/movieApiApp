@@ -42,11 +42,11 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+    
+    <div>
+        <ng-view></ng-view>
+    </div>
 
-<div>
-    <ng-view></ng-view>
-
-  </div>
 
 
 
@@ -55,35 +55,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     <!-- AngularJS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-route.min.js"></script>
-
-	<!-- Module -->
-	<script src="app/app.js"></script>
-
-	<!-- Service -->
-  <script src="services/services.js"></script>
-
-  <!-- ROUTE / home -->
-  <script src="routes/home/controller.js"></script>
-  <script src="routes/home/config.js"></script>
-
-  <!-- ROUTE / nowPlaying -->
-  <script src="routes/nowPlaying/controller.js"></script>
-  <script src="routes/nowPlaying/config.js"></script>
-  
-  <!-- ROUTE / popular -->
-  <script src="routes/popular/controller.js"></script>
-  <script src="routes/popular/config.js"></script>
-
-   <!-- ROUTE / topRated -->
-  <script src="routes/topRated/controller.js"></script>
-  <script src="routes/topRated/config.js"></script>
-  
-
-
+    
+    <!-- Module -->
+    <script src="app/app.js"></script>
+    <!-- Service -->
+    <script src="services/services.js"></script>
+    <!-- ROUTE / searchResults -->
+    <script src="routes/searchResults/controller.js"></script>
+    <script src="routes/searchResults/config.js"></script>
+    <!-- ROUTE / nowPlaying -->
+    <script src="routes/nowPlaying/controller.js"></script>
+    <script src="routes/nowPlaying/config.js"></script>
+    <!-- ROUTE / popular -->
+    <script src="routes/popular/controller.js"></script>
+    <script src="routes/popular/config.js"></script>
+    <!-- ROUTE / topRated -->
+    <script src="routes/topRated/controller.js"></script>
+    <script src="routes/topRated/config.js"></script>
+    <!-- ROUTE / upcoming -->
+    <script src="routes/upcoming/controller.js"></script>
+    <script src="routes/upcoming/config.js"></script>
 </body>
 
 </html>

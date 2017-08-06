@@ -1,12 +1,8 @@
-myApp.controller('popularController', function($routeParams, DataService) {
-    var self = this;
+myApp.controller('popularController', function($routeParams, $location, DataService) {
+    
     console.log('popular controller loading')
-
-    self.picture;
-    self.title;
-    self.overview;
-    self.releasedate;
-    console.log('all Popular self created')
+    var self = this;
+    self.query = "";
     showPopular()
 
     function showPopular() {
@@ -17,11 +13,11 @@ myApp.controller('popularController', function($routeParams, DataService) {
         })
     }
 
-    /*
-	self.showNowPlaying = function () {
-		getInfoServices.getNowPlaying(response)
-		  .then( this.nowPlaying = response);
-	}
-*/
+     self.searchTrigger = function () {
+        console.log('searh Triggered')
+        console.log(self.query)
+        $location.path('/search/' + self.query)
+
+    }
 
 })

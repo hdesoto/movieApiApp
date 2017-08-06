@@ -1,27 +1,23 @@
-myApp.controller('topRatedController', function($routeParams, DataService) {
-    var self = this;
+myApp.controller('topRatedController', function($routeParams, $location, DataService) {
+    
     console.log('Top Rated controller loading')
-
-    self.picture;
-    self.title;
-    self.overview;
-    self.releasedate;
-    console.log('all Top Rated self created')
+    var self = this;
+    self.query = "";
     showTopRated()
-
+    
     function showTopRated() {
         console.log('showTopRated')
         DataService.getTopRated(function(response) {
             self.topRatedArray = response;
             console.log(self.topRatedArray)
+            
         })
     }
 
-    /*
-	self.showNowPlaying = function () {
-		getInfoServices.getNowPlaying(response)
-		  .then( this.nowPlaying = response);
-	}
-*/
+     self.searchTrigger = function () {
+        console.log('searh Triggered')
+        console.log(self.query)
+        $location.path('/search/' + self.query)
 
+    }
 })
