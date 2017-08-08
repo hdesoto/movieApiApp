@@ -4,7 +4,7 @@ angular.module('MoviesApp')
       .config(function ($routeProvider) {
         $routeProvider
       .when('/upcoming', {
-        templateUrl: 'routes/upcoming/template.html',
+        templateUrl: 'app/routes/upcoming/template.html',
         controller: 'upcomingController',
         controllerAs: 'upCtrl'
       })
