@@ -1,7 +1,7 @@
 /* global angular */
 
 angular.module('MoviesApp')
-      .config(function ($routeProvider,$location) {
+      .config(function ($routeProvider) {
         $routeProvider
       .when('/', {
         templateUrl: 'routes/nowPlaying/template.html',
